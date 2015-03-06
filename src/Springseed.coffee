@@ -49,7 +49,12 @@ class SpringseedWindow
           accelerator: "Command+Q",
           click: =>
             app.quit()
-      }]
+          }, {
+          label: "Toggle Fullscreen",
+          accelerator: "F",
+          click: =>
+            window.setFullScreen(!window.isFullScreen())
+          }]
     }]
   linuxMenus: ->
     tmpl = [{
@@ -68,7 +73,12 @@ class SpringseedWindow
           accelerator: "Ctrl+Q",
           click: =>
             app.quit()
-      }]
+          }, {
+          label: "Toggle Fullscreen",
+          accelerator: "F",
+          click: =>
+            window.setFullScreen(!window.isFullScreen())
+          }]
     }]
 
     menu = Menu.buildFromTemplate tmpl
